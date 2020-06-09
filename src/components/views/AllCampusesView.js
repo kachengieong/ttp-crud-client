@@ -3,6 +3,10 @@ import "./styles/AllCampusesView.css";
 import PropTypes from "prop-types";
 
 const AllCampusesView = (props) => {
+  if (!props.allCampuses.length) {
+    return <div className="all-campuses">There are no campuses</div>;
+  }
+
   return (
     <div className="all-campuses">
       {props.allCampuses.map((campus) => (
