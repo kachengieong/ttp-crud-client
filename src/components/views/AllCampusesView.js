@@ -1,17 +1,13 @@
 import React from "react";
 import "./styles/AllCampusesView.css";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 
 const AllCampusesView = (props) => {
   return (
     <div className="all-campuses">
       {props.allCampuses.map((campus) => (
         <div key={campus.id}>
-          <Link to={`/campuses/${campus.id}`}>
-            <h1>{campus.name}</h1>
-          </Link>
-          <p>{campus.description}</p>
+          <h1>{campus.name}</h1>
         </div>
       ))}
     </div>
