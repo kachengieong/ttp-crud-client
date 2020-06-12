@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/AllCampusesView.css";
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 const AllCampusesView = (props) => {
   if (!props.allCampuses.length) {
