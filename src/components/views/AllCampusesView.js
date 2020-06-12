@@ -11,7 +11,10 @@ const AllCampusesView = (props) => {
     <div className="all-campuses">
       {props.allCampuses.map((campus) => (
         <div key={campus.id}>
-          <h1>{campus.name}</h1>
+          <Link to={`/campuses/${campus.id}`}>
+            <h1>{campus.name}</h1>
+          </Link>
+          <p>{campus.description}</p>
         </div>
       ))}
     </div>
